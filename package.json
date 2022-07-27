@@ -1,5 +1,5 @@
 {
-  "name": "small-log",
+  "name": "@abrahamfig/small-log",
   "version": "0.0.1",
   "description": "A logger that know where it was called.",
   "main": "lib/index.js",
