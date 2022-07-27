@@ -1,0 +1,39 @@
+{
+  "name": "small-log",
+  "version": "0.0.1",
+  "description": "A logger that know where it was called.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "lint": "npx eslint src/**",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "author": "MAshford",
+  "keywords": [
+    "log",
+    "logger"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^28.1.4",
+    "@typescript-eslint/eslint-plugin": "^5.30.5",
+    "@typescript-eslint/parser": "^5.30.5",
+    "eslint": "^8.19.0",
+    "jest": "^28.1.2",
+    "ts-jest": "^28.0.5",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "node-inspect-extracted": "^1.1.0",
+    "prettier": "^2.7.1"
+  },
+  "files": [
+    "lib/**/*"
+  ]
+}
