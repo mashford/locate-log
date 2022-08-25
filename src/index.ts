@@ -12,16 +12,13 @@ export const getParamString = (param: unknown) => {
   return `${param}`;
 };
 
-export const getLocation = () => {
+export const log = (...params: unknown[]) => {
   const str = new Error().stack?.toString();
   const Regexp = /\/(\w|.)+\.(js|ts):\d+:\d+/g;
-  return Regexp.exec(str?.split("\n")[2] ?? "")?.[0];
-};
-
-export const log = (...params: unknown[]) => {
+  const location = Regexp.exec(str?.split("\n")[2] ?? "")?.[0];
   const paramStrings = [];
   for (const param of params) {
     paramStrings.push(getParamString(param));
   }
-  console.log(`%c${getLocation()}\n` + paramStrings.join(" "), "color: green;");
+  console.log(`%c${location}\n ${paramStrings.join(" ")}`, "color: green;");
 };

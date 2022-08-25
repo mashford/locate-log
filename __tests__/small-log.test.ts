@@ -21,7 +21,7 @@ test("getParamString-Boolean", () => {
 });
 
 test("getParamString-Number", () => {
-  expect(getParamString(true)).toBe("true");
+  expect(getParamString(-1234567)).toBe("-1234567");
 });
 
 test("getParamString-Object", () => {
