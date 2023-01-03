@@ -20,5 +20,5 @@ export const log = (...params: unknown[]) => {
   for (const param of params) {
     paramStrings.push(getParamString(param));
   }
-  console.log(`%c${location}\n ${paramStrings.join(" ")}`, "color: green;");
+  console.log(`%c${location}\n${paramStrings.join(" ")}`, "color: green;");
 };
