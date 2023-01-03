@@ -11,9 +11,7 @@ pnpm i @abrahamfig/small-log
 ### usage
 
 ```Typescript
-//
 import { log } from '@abrahamfig/small-log'
 
 log({})
-//
 ```
